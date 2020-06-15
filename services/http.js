@@ -9,18 +9,19 @@ function http(){
 
       return "";
     }
+    this.requestType = function(){
+      return "None";
+    }
     this.clickIndex = function(index){
-
       console.log(index);
     }
     this.success = function(response){
-
-      var book  = new Book({name:response.data[0].data});
-      return [book];
-
+      return [new Book({name:"book"}),
+              new Book({name:"book"}),
+              new Book({name:"book"}),
+              new Book({name:"book"})];
     }
     this.failed = function(error){
-
 
     }
 
